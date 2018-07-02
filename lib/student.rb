@@ -41,5 +41,7 @@ class Student
     @id = DB[:conn].execute('SELECT id FROM students ORDER BY id DESC LIMIT 1')[0][0]
   end
   
-  
+  def self.create(name:, grade:)
+    new(name, grade).tap { |pupil| pupil.save }
+  end
 end
