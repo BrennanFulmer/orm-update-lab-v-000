@@ -63,7 +63,8 @@ class Student
   end
   
   def update
-    # makes DB match object
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
   
 end
