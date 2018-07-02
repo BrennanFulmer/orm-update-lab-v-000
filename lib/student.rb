@@ -33,7 +33,7 @@ class Student
   
   def save
     unless self.id
-    sql = <<-SQL
+      sql = <<-SQL
         INSERT INTO students (name, grade) 
         VALUES (?, ?)
       SQL
