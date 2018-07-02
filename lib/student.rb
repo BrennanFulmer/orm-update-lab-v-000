@@ -69,8 +69,7 @@ class Student
       SET name = ?, grade = ? 
       WHERE id = ?"
     SQL
-    
-    sql = 
+
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
   
