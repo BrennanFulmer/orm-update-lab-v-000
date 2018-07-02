@@ -71,7 +71,7 @@ class Student
       LIMIT 1
     SQL
     
-    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    sql = 
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
   
